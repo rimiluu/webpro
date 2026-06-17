@@ -667,7 +667,7 @@ iframe {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background: #ffffff url("./assets/honnova-thumb.jpg.png") center / cover no-repeat;
+  background: #ffffff url("./assets/honnoba-aws.png") center / cover no-repeat;
 }
 
 .honnova-process::before {
@@ -675,13 +675,31 @@ iframe {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: rgba(255, 255, 255, 0.56);
-  backdrop-filter: blur(1px);
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(1px) saturate(0.82);
 }
 
 .honnova-process > * {
   position: relative;
   z-index: 1;
+}
+
+.honnova-process h3,
+.honnova-process .timeline p {
+  color: #ffffff;
+}
+
+.honnova-process .timeline p {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.28);
+}
+
+.honnova-process .timeline::before,
+.honnova-process .timeline span::after {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.honnova-process .timeline span {
+  color: #ffffff;
 }
 
 .honnova-concept {
@@ -947,18 +965,102 @@ iframe {
 .role-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  width: min(780px, 100%);
+  gap: 5px;
+  width: min(960px, 100%);
   margin: 42px auto 0;
 }
 
-.role-grid span {
-  min-height: 108px;
-  padding: 22px;
-  border: 1px solid var(--line);
-  background: #ffffff;
-  font-size: 14px;
-  font-weight: 800;
+.role-card {
+  --piece: #d8ded8;
+  position: relative;
+  z-index: 1;
+  min-height: 176px;
+  padding: clamp(26px, 3vw, 42px);
+  background: var(--piece);
+  color: var(--ink);
+  overflow: visible;
+}
+
+.role-card::before {
+  content: "";
+  position: absolute;
+  width: clamp(42px, 5.2vw, 72px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.role-card::before {
+  z-index: 2;
+  background: var(--piece);
+}
+
+.role-card::after {
+  content: none;
+}
+
+.role-card h4,
+.role-card p {
+  position: relative;
+  z-index: 3;
+}
+
+.role-card h4 {
+  margin: 0 0 22px;
+  font-size: clamp(15px, 1.45vw, 20px);
+  line-height: 1.45;
+}
+
+.role-card p {
+  margin: 0;
+  font-size: clamp(14px, 1.05vw, 17px);
+  line-height: 2;
+}
+
+.role-card:nth-child(1) {
+  --piece: #d9e4dd;
+  z-index: 5;
+}
+
+.role-card:nth-child(2) {
+  --piece: #efe1c9;
+  z-index: 4;
+}
+
+.role-card:nth-child(3) {
+  --piece: #d8e4ee;
+  z-index: 1;
+}
+
+.role-card:nth-child(4) {
+  --piece: #f2d6be;
+  z-index: 5;
+}
+
+.role-card:nth-child(5) {
+  --piece: #d8d4e8;
+  z-index: 4;
+}
+
+.role-card:nth-child(6) {
+  --piece: #e8dda8;
+  z-index: 3;
+}
+
+.role-card:nth-child(1)::before,
+.role-card:nth-child(2)::before,
+.role-card:nth-child(4)::before,
+.role-card:nth-child(5)::before {
+  right: calc(clamp(42px, 5.2vw, 72px) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.role-card:nth-child(4)::before,
+.role-card:nth-child(6)::before {
+  left: 50%;
+  top: calc(clamp(42px, 5.2vw, 72px) / -2);
+  transform: translateX(-50%);
 }
 
 .ui-point {
@@ -1427,6 +1529,17 @@ ul {
 
   .role-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .role-card {
+    min-height: 160px;
+    overflow: hidden;
+  }
+
+  .role-card::before,
+  .role-card::after {
+    content: none;
   }
 
   .kana,
@@ -2118,7 +2231,7 @@ ul {
   }
 
   .process.honnova-process {
-    background: #ffffff url("./assets/honnova-thumb.jpg.png") center / cover no-repeat;
+    background: #ffffff url("./assets/honnoba-aws.png") center / cover no-repeat;
   }
 
   .timeline {
@@ -2174,10 +2287,6 @@ ul {
     align-content: center;
     background: #ffffff;
   }
-  .role-card{
-    background-color: var(--line);
-    padding: 10px 24px;
-  }
   
   .role h3 {
     margin: 0 0 clamp(48px, 7vh, 82px);
@@ -2187,25 +2296,8 @@ ul {
   .role-grid {
     width: min(1280px, 100%);
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(54px, 6vh, 84px) clamp(58px, 6vw, 110px);
+    gap: 5px;
     margin: 0 auto;
-  }
-  
-  .role-grid span {
-    min-height: clamp(160px, 18vh, 210px);
-    padding: clamp(30px, 3vw, 44px);
-    background: #d8d8d8;
-    border: 0;
-    color: var(--ink);
-    font-size: clamp(14px, 1.02vw, 18px);
-    font-weight: 500;
-    line-height: 2;
-    letter-spacing: 0.12em;
-  }
-  
-  .role-grid span::before,
-  .role-grid span::after {
-    content: none;
   }
 
   .ui-point {
