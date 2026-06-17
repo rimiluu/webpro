@@ -9,7 +9,9 @@
   <body>
     <header class="topbar" aria-label="Site header">
       <a class="brand" href="./index.html" aria-label="Portfolio top">
-        <strong>PORTFOLIO</strong>
+        <span class="sr-only">PORTFOLIO</span>
+        <strong class="brand-text">PORTFOLIO</strong>
+        <img class="brand-logo" src="./assets/type-portfolio.svg" alt="" aria-hidden="true" />
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="./honnova.html">01</a>
@@ -48,7 +50,9 @@
           </div>
 
           <div class="honnova-fixed-mock" aria-hidden="true">
-            <img src="./assets/placeholder.svg" alt="" /><img src="./assets/placeholder.svg" alt="" /><img src="./assets/placeholder.svg" alt="" /><img src="./assets/placeholder.svg" alt="" /><img src="./assets/placeholder.svg" alt="" />
+            <img src="./assets/honnnoba-top-1.png" alt="" />
+            <img src="./assets/honnoba-top-3.png" alt="" />
+            <img src="./assets/honnnoba-top-7.png" alt="" />
           </div>
         </div>
 
@@ -61,7 +65,7 @@
           </div>
         </div>
 
-        <div class="concept-zone">
+        <div class="concept-zone honnova-concept">
           <h3>ちいさなまちの<br>本のある場をつなぐ</h3>
           <p>ホンノバでは、本を「借りるもの」だけではなく、<br>
             場所や人と出会うきっかけとして捉えています。 <br>
@@ -76,34 +80,40 @@
           <p class="eyebrow">Service Design</p>
           <div class="sticky-service-body">
             <div class="service-fixed-visual">
-              <img class="service-screen" src="./assets/placeholder.svg" alt="" />
+              <div class="service-screen-stack">
+                <img class="service-screen is-active" data-service-image="1" src="./assets/honnoba-detail-1.png" alt="" />
+                <img class="service-screen" data-service-image="2" src="./assets/honnoba-detail-2.png" alt="" />
+                <img class="service-screen" data-service-image="3" src="./assets/honnoba-detail-3.png" alt="" />
+                <img class="service-screen service-screen--landscape" data-service-image="4" src="./assets/honnoba-detail-4.jpg" alt="" />
+                <img class="service-screen service-screen--landscape" data-service-image="5" src="./assets/honnova-thumb.jpg.png" alt="" />
+              </div>
             </div>
             <div class="service-copy">
-              <div class="service-step">
+              <div class="service-step" data-service-step="1">
                 <img class="service-step__number" src="./assets/01-img.png" alt="01">
                 <h3>知る</h3>
                 <p>まちにある本棚や、本棚に置かれている本の存在を知る。</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="2">
                 <img class="service-step__number" src="./assets/2-img.png" alt="02">
                 <h3>探す</h3>
                 <p>気になる本棚や本を探し、行きたい場所を見つける。</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="3">
                 <img class="service-step__number" src="./assets/3-img.png" alt="03">
                 <h3>見る</h3>
                 <p>本棚の情報、置かれている本、場所の雰囲気を見る。</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="4">
                 <img class="service-step__number" src="./assets/4-img.png" alt="04">
                 <h3>行く</h3>
                 <p>実際にその場所へ行き、本や本棚に触れる。</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="5">
                 <img class="service-step__number" src="./assets/5-img.svg" alt="05">
                 <h3>出会う</h3>
                 <p>本をきっかけに、場所や人との新しい接点を見つける。</p>
@@ -122,7 +132,7 @@
           </dl>
         </div>
 
-        <div class="process">
+        <div class="process honnova-process">
           <h3>Process &amp; Achievement</h3>
           <div class="timeline">
             <div><span>2024</span><p>神山町にある本棚を調査し、本がある場所や本棚に関わる人の声を集めました。</p></div>

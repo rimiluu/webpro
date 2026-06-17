@@ -9,7 +9,9 @@
   <body>
     <header class="topbar" aria-label="Site header">
       <a class="brand" href="./index.html" aria-label="Portfolio top">
-        <strong>PORTFOLIO</strong>
+        <span class="sr-only">PORTFOLIO</span>
+        <strong class="brand-text">PORTFOLIO</strong>
+        <img class="brand-logo" src="./assets/type-portfolio.svg" alt="" aria-hidden="true" />
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="./honnova.html">01</a>
@@ -69,28 +71,33 @@
           <p class="eyebrow">Service Design</p>
           <div class="sticky-service-body">
             <div class="service-fixed-visual">
-              <img class="service-screen" src="./assets/placeholder.svg" alt="" />
+              <div class="service-screen-stack">
+                <img class="service-screen is-active" data-service-image="1" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen" data-service-image="2" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen" data-service-image="3" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen" data-service-image="4" src="./assets/placeholder.svg" alt="" />
+              </div>
             </div>
             <div class="service-copy">
-              <div class="service-step">
+              <div class="service-step" data-service-step="1">
                 <img class="service-step__number" src="./assets/01-img.png" alt="01">
                 <h3>SNS型の投稿閲覧</h3>
                 <p>健康・運動に関する投稿だけを見られるSNS型の画面</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="2">
                 <img class="service-step__number" src="./assets/2-img.png" alt="02">
                 <h3>保存フォルダ</h3>
                 <p>気になった投稿や動画を、自分のフォルダに保存できる機能</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="3">
                 <img class="service-step__number" src="./assets/3-img.png" alt="03">
                 <h3>動画ToDo化</h3>
                 <p>保存したエクササイズ動画を組み合わせ、自分用のToDoリストとして管理する</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="4">
                 <img class="service-step__number" src="./assets/4-img.png" alt="04">
                 <h3>メダル機能</h3>
                 <p>条件を達成するとメダルがもらえる仕組みで、継続のモチベーションを高める</p>
@@ -119,4 +126,3 @@
     <script src="./script.js"></script>
   </body>
 </html>
-

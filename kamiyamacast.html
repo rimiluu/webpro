@@ -9,7 +9,9 @@
   <body>
     <header class="topbar" aria-label="Site header">
       <a class="brand" href="./index.html" aria-label="Portfolio top">
-        <strong>PORTFOLIO</strong>
+        <span class="sr-only">PORTFOLIO</span>
+        <strong class="brand-text">PORTFOLIO</strong>
+        <img class="brand-logo" src="./assets/type-portfolio.svg" alt="" aria-hidden="true" />
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="./honnova.html">01</a>
@@ -53,34 +55,40 @@
           <p class="eyebrow">Media Operation</p>
           <div class="sticky-service-body">
             <div class="service-fixed-visual">
-              <img class="service-screen" src="./assets/placeholder.svg" alt="" />
+              <div class="service-screen-stack service-screen-stack--media">
+                <img class="service-screen media-service-screen cast-service-screen is-active" data-service-image="1" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen media-service-screen cast-service-screen" data-service-image="2" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen media-service-screen cast-service-screen" data-service-image="3" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen media-service-screen cast-service-screen" data-service-image="4" src="./assets/placeholder.svg" alt="" />
+                <img class="service-screen media-service-screen cast-service-screen" data-service-image="5" src="./assets/placeholder.svg" alt="" />
+              </div>
             </div>
             <div class="service-copy">
-              <div class="service-step">
+              <div class="service-step" data-service-step="1">
                 <img class="service-step__number" src="./assets/01-img.png" alt="01">
                 <h3>企画</h3>
                 <p>話すテーマやゲスト、届けたい相手を考える</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="2">
                 <img class="service-step__number" src="./assets/2-img.png" alt="02">
                 <h3>収録</h3>
                 <p>学生同士の自然な会話を大切にしながら収録する</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="3">
                 <img class="service-step__number" src="./assets/3-img.png" alt="03">
                 <h3>編集</h3>
                 <p>聞きやすさを意識して音声を整え、必要に応じて構成を調整する</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="4">
                 <img class="service-step__number" src="./assets/4-img.png" alt="04">
                 <h3>配信</h3>
                 <p>Podcastプラットフォームで公開し、サイトやSNSからアクセスできるようにする</p>
               </div>
               
-              <div class="service-step">
+              <div class="service-step" data-service-step="5">
                 <img class="service-step__number" src="./assets/5-img.svg" alt="05">
                 <h3>広報・配信</h3>
                 <p>公開したエピソードをサイトやSNSで発信し、より多くの人にKamiyamaCastを届ける</p>
